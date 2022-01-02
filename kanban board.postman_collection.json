@@ -1,0 +1,180 @@
+{
+	"info": {
+		"_postman_id": "b42096f9-58d9-42e4-b658-c93f9eb532b2",
+		"name": "kanban board",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create board",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"sagdic2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/kanban/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"kanban",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get board by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/kanban/61d0b2d28b01abaf4381f300",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"kanban",
+						"61d0b2d28b01abaf4381f300"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get list by id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n\"title\":\"birinci\",\r\n\"content\":\"eğitim içeriği\",\r\n\"creator\":\"Murat Sağdıç\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/kanban/list/61d0a6175f4f4b7bc3b88d4d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"kanban",
+						"list",
+						"61d0a6175f4f4b7bc3b88d4d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create card",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"title\":\"ev\",\r\n\"description\":\"odev\",\r\n\"boardId\":\"61d0b2d28b01abaf4381f300\",\r\n\"listId\":\"61d0b2d28b01abaf4381f302\",\r\n\"sort\":0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/kanban/card",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"kanban",
+						"card"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update card by id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n\"title\":\"birinci\",\r\n\"description\":\"eğitim içeriği\",\r\n\"sort\":3,\r\n\"listId\":\"61d0b2d28b01abaf4381f302\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/kanban/card/61d0b2fb8b01abaf4381f30a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"kanban",
+						"card",
+						"61d0b2fb8b01abaf4381f30a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete cards by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n\"title\":\"birinci\",\r\n\"content\":\"eğitim içeriği\",\r\n\"creator\":\"Murat Sağdıç\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/kanban/card/61d0c434be276b990d64f4e5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"kanban",
+						"card",
+						"61d0c434be276b990d64f4e5"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
