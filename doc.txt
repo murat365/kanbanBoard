@@ -1,0 +1,3 @@
+Tarif edilen kanban board uygulamasının frontend için gerekli olan backend servislerini hazırladım. 6 servis var.
+ Bunlar kanban oluşturma, id ye göre kanban board getirme, listeyi id'ye göre getirme, kart oluşturma, kart güncelleme 
+ ve kart silme servisleri. Servislerle ilgili daha detaylı bilgileri postman collection da bulabilirsiniz.	 
